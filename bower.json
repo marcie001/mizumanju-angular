@@ -1,0 +1,58 @@
+{
+  "name": "mizumanju",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "2.1.1",
+    "es5-shim": "3.4.0",
+    "bootstrap": "3.2.0",
+    "angular": "1.2.25",
+    "angular-ui-sortable": "0.12.8",
+    "modernizr": "2.8.3",
+    "angular-mocks": "1.2.25",
+    "angular-ui-bootstrap-bower": "~0.11.2",
+    "angular-route": "1.2.25"
+  },
+  "devDependencies": {},
+  "exportsOverride": {
+    "jquery": {
+      "main-js": "dist/jquery.js"
+    },
+    "jquery-ui": {
+      "main-js": "jquery-ui.min.js",
+      "css": "themes/black-tie"
+    },
+    "es5-shim": {
+      "main-js": "es5-shim.js"
+    },
+    "angular": {
+      "main-js": [
+        "angular.js",
+        "angular.min.js",
+        "angular.min.js.map"
+      ]
+    },
+    "angular-ui-sortable": {
+      "main-js": "sortable.min.js"
+    },
+    "modernizr": {
+      "main-js": "modernizr.js"
+    },
+    "bootstrap": {
+      "main-js": "dist/js/bootstrap.min.js",
+      "css": "dist/css/*.min.css",
+      "fonts": "dist/fonts/*.*"
+    },
+    "angular-mocks": {
+      "main-js": "angular-mocks.js"
+    },
+    "angular-route": {
+      "main-js": "angular-route.js"
+    },
+    "angular-ui-bootstrap-bower": {
+      "main-js": [
+        "ui-bootstrap-tpls.js",
+        "ui-bootstrap.js"
+      ]
+    }
+  }
+}

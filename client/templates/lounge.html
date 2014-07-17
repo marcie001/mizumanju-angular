@@ -1,0 +1,44 @@
+		<form class="form-signin" role="form" name="loginForm" ng-hide="isAuthenticated()" ng-controller="LoginController as loginCtl" ng-submit="loginForm.$valid && login(credentials)" novalidate >
+			<h2 class="form-signin-heading"><span ng-hide="loginFailed">Sign in</span><span class="error" ng-show="loginFailed">Incorrect</span></h2>
+			<div ng-repeat="msg in msgs">
+				<alert ng-repeat="m in msg" type="danger" >{{m}}</alert>
+			</div>
+			<input class="form-control" placeholder="username" type="text" name="User name" ng-model="credentials.username" required />
+			<input class="form-control" placeholder="Password" type="password" name="password" ng-model="credentials.password" required />
+			<button class="btn btn-lg btn-primary btn-block" type="submit" ng-disabled="!loginForm.$valid">Sign in</button>
+		</form>
+		<div ng-show="isAuthenticated()" class="starter-template" ng-controller="LoungeController as loungeCtl">
+			<div class="row row-offcanvas row-offcanvas-right">
+				<div class="jumbotron">
+					<h1>Lounge</h1>
+					<p class="btn-group" data-toggle="buttons">
+						<label ng-repeat="user in users" class="btn btn-primary" ng-class="{active: user.hide}">
+							<input type="checkbox" ng-model="user.hide"> {{user.name}}
+						</label>
+					</p>
+				</div>
+			</div>
+			<div class="row user-images" ui-sortable ng-model="users">
+				<div class="col-3 col-sm-3 col-lg-2" ng-repeat="user in users" ng-hide="user.hide">
+					<p><img ng-src="{{user.image}}" /></p>
+					<p><span>{{user.name}}</span></p>
+					<p><button class="btn btn-default" role="button" ng-click="showImage(user)">delete</button></p>
+				</div>
+			</div>
+		</div>
+		<div ng-show="isAuthenticated()" class="starter-template" ng-controller="CameraController as cameraCtl">
+			<h2>You</h2>
+			<div>
+				<video id="myvideo"></video>
+			</div>
+			<div>
+				<canvas id="mycanvas0"></canvas>
+			</div>
+			<div>
+				<canvas id="mycanvas1"></canvas>
+			</div>
+			<div>
+				<button class="btn btn-lg btn-outline" role="button" type="button" ng-hide="isActive" ng-click="start()" >start</button>
+				<button class="btn btn-lg btn-outline" role="button" type="button" ng-show="isActive" ng-click="stop()" >stop</button>
+			</div>
+		</div>

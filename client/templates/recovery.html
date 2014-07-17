@@ -1,0 +1,27 @@
+<form role="form" name="recoveryForm" ng-controller="RecoveryController" ng-submit="recoveryForm.$valid && update(password)" novalidate>
+<div class="starter-template">
+	<h1>Enter new password</h1>
+	<div ng-repeat="msg in msgs">
+		<alert ng-repeat="m in msg" type="danger" >{{m}}</alert>
+	</div>
+	<alert type="success" ng-show="success" >Password was updated.</alert>
+	<div class="form-group">
+		<label for="recoveryForm-password">New Password</label>
+		<input class="form-control" id="recoveryForm-password" type="password" placeholder="New Password" ng-model="password.password" name="password" required same="password.confirm" />
+	</div>
+	<div ng-show="!recoveryForm.password.$pristine && recoveryForm.password.$invalid" class="alert alert-danger" role="alert">
+		<div ng-show="recoveryForm.password.$error.required">New password is required.</div>
+		<div ng-show="recoveryForm.password.$error.same || recoveryForm.confirm.$error.same">New password and New password(confirm) are not same.</div>
+	</div>
+	<div class="form-group">
+		<label for="recoveryForm-confirm">New Password(confirm)</label>
+		<input class="form-control" id="recoveryForm-confirm" type="password" placeholder="New Password(confirm)" ng-model="password.confirm" name="confirm" required same="password.password" />
+	</div>
+	<div ng-show="!recoveryForm.confirm.$pristine && recoveryForm.confirm.$error.required" class="alert alert-danger" role="alert">
+		<span>New password(confirm) is required.</span>
+	</div>
+	<div class="form-group">
+		<button class="btn btn-primary" ng-disabled="!recoveryForm.$valid">Update</button>
+	</div>
+</div>
+</form>

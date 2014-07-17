@@ -1,0 +1,39 @@
+{
+	"version": "v4",
+	"repo": "borisyankov/DefinitelyTyped",
+	"ref": "master",
+	"path": "client/scripts/libs/typing",
+	"bundle": "client/scripts/libs/typing/bundle.d.ts",
+	"installed": {
+		"jquery/jquery.d.ts": {
+			"commit": "3a45891ed4dce5760fde1f60ccc2789b6e5a5ff4"
+		},
+		"mocha/mocha.d.ts": {
+			"commit": "4cf10109b729a39130cb13bb3d4a069e6a2c2eb1"
+		},
+		"assert/assert.d.ts": {
+			"commit": "4cf10109b729a39130cb13bb3d4a069e6a2c2eb1"
+		},
+		"angularjs/angular.d.ts": {
+			"commit": "3a45891ed4dce5760fde1f60ccc2789b6e5a5ff4"
+		},
+		"angular-protractor/angular-protractor.d.ts": {
+			"commit": "b0b4af1223f4f9449012688fa0c18f20cc3267e7"
+		},
+		"selenium-webdriver/selenium-webdriver.d.ts": {
+			"commit": "b0b4af1223f4f9449012688fa0c18f20cc3267e7"
+		},
+		"angularjs/angular-mocks.d.ts": {
+			"commit": "eef872b96a458fde22571def5a368a867de9901b"
+		},
+		"angularjs/angular-route.d.ts": {
+			"commit": "c71628e0765eb8e240d8eabd2225f64ea2e2fdb8"
+		},
+		"jasmine/jasmine.d.ts": {
+			"commit": "eef872b96a458fde22571def5a368a867de9901b"
+		},
+		"angular-ui-bootstrap/angular-ui-bootstrap.d.ts": {
+			"commit": "bd9a1922e44ddf35953587a92c5caf4242bf6ea5"
+		}
+	}
+}

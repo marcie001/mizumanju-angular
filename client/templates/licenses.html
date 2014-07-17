@@ -1,0 +1,16 @@
+<form role="form" name="passwordForm" ng-submit="passwordForm.$valid && $close(password)" novalidate>
+<div class="modal-header">
+	<h3 class="modal-title">Licenses</h3>
+</div>
+<div class="modal-body">
+	<div ng-repeat="msg in msgs">
+		<alert ng-repeat="m in msg" type="danger" >{{m}}</alert>
+	</div>
+	<ul ng-repeat="lc in licenses">
+		<li>"<a href="{{lc.source}}" target="_blank">{{lc.title}}</a>" by <a href="{{lc.authorURL}}" target="_blank">{{lc.author}}</a> is licensed under <a href="{{lc.licenseURL}}" target="_blank">{{lc.license}}</a></li>
+	</ul>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-warning" ng-click="$dismiss()">Close</button>
+</div>
+</form>
